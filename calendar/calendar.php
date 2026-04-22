@@ -11,11 +11,11 @@
         </tr>
         <?php
             for ($i = 0; $i < 5; $i++) {
-                echo '<tr id="row{$i}">\n';
+                echo '<tr id="row{$i}">';
                 for ($j = 0; $j < 7; $j++) {
                     echo '<td id="calendar-{$i}-{$j}"></td>';
                 };
-                echo '</tr>\n';
+                echo '</tr>';
             };
         ?>
     </table>
