@@ -15,7 +15,7 @@
                 for ($j = 0; $j < 7; $j++) {
                     echo "<td id='calendar-{$i}-{$j}'></td>";
                 };
-                echo '</tr>';
+                echo "</tr>";
             };
         ?>
     </table>
