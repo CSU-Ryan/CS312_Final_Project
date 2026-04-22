@@ -1,4 +1,4 @@
 pull:
 	git restore .
 	git pull
-	chmod 735 *
+	chmod 755 *
