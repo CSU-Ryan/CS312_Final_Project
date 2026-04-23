@@ -1,4 +1,13 @@
 <section id='calendar'>
+    <div id='calendar-header'>
+        <button id='prior-month' class='calendar-button'>Last Month Year</button>
+        <button id='next-month' class='calendar-button'>Next Month Year</button>
+
+        <h2 id='month-header'>Month Year</h2>
+
+        <button id='new-event' class='calendar-button'>Create New Event</button>
+    </div>
+
     <table>
         <tr id='week-days'>
             <th><div id='sun' class='calendar-header'>Sunday</div></th>

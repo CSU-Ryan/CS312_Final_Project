@@ -13,7 +13,6 @@
 
 <body>
     <?php
-        include('header.php');
         include('calendar.php');
     ?>
 </body>
