@@ -1,13 +1,13 @@
 <section id='calendar'>
     <table>
         <tr id='week-days'>
-            <th id='sunday'>Sunday</th>
-            <th id='monday'>Monday</th>
-            <th id='tuesday'>Tuesday</th>
-            <th id='wednesday'>Wednesday</th>
-            <th id='thursday'>Thursday</th>
-            <th id='friday'>Friday</th>
-            <th id='saturday'>Saturday</th>
+            <th>Sunday</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
         </tr>
         <?php
             for ($i = 0; $i < 5; $i++) {
