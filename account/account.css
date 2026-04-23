@@ -5,17 +5,32 @@
     justify-content: center;
     margin: auto;
 
-    width: 80%;
+    width: 100ex;
     min-width: 440px;
     height: 100%;
 
     .field {
         margin: 10px;
         width: 100%;
-        display: block;
+        display: flex;
+        flex-direction: row;
+        border: gray solid 1px;
+        border-radius: 10px;
+
+        label {
+            display: inline-block;
+            margin: auto;
+        }
+
+        input {
+            width: 70%;
+            margin-left: auto;
+        }
+
+        button {
+            margin: auto;
+        }
     }
 
-    button {
-        margin: 10px;
-    }
+
 }
