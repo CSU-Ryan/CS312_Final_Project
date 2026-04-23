@@ -3,23 +3,20 @@
     width: 90%;
 
     table {
+        th, td {
+            border: 1px solid black;
+            margin: 5px;
+            width: calc(100%/7);
+            height: auto;
+        }
 
         th {
-            border: gray solid 1px;
-
-            padding: 5px;
             text-align: center;
             text-transform: uppercase;
         }
 
         td {
-            border: gray solid 1px;
-
-            width: calc(90%/7);
-            min-width: 10ex;
             aspect-ratio: 1.1;
-
-            padding: 5px;
         }
     }
 }
