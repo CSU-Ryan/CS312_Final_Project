@@ -8,11 +8,11 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 10px 0;
-}
 
-#navigate-calendar {
-    display: flex;
-    flex-direction: row;
+    div {
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 .calendar-button {

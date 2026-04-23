@@ -1,13 +1,15 @@
 <section id='calendar'>
     <div id='calendar-header'>
-        <div id='navigate-calendar'>
+        <div>
             <button id='prior-month' class='calendar-button'>Last Month Year</button>
             <button id='next-month' class='calendar-button'>Next Month Year</button>
         </div>
 
         <h2 id='month-header'>Month Year</h2>
 
-        <button id='new-event' class='calendar-button'>Create New Event</button>
+        <div id='create-event'>
+            <button id='new-event' class='calendar-button'>Create New Event</button>
+        </div>
     </div>
 
     <table>
