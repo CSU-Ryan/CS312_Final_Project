@@ -1,17 +1,22 @@
-.account-form {
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: auto;
 
-    width: 100ex;
-    min-width: 440px;
+    width: 90%;
+    max-width: 150ex;
     height: 100%;
+
+    h2 {
+        text-align: center;
+    }
 
     .field {
         margin: 10px;
-        width: 100%;
+        padding: 10px;
+
         display: flex;
         flex-direction: row;
         border: gray solid 1px;
@@ -26,11 +31,12 @@
             width: 70%;
             margin-left: auto;
         }
-
-        button {
-            margin: auto;
-        }
     }
 
-
+    button {
+        display: block;
+        margin: auto;
+        width: 90%;
+        max-width: 150px;
+    }
 }

@@ -22,8 +22,8 @@
             </div>
 
             <div class="field">
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="Password" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Password" required>
             </div>
 
             <button type="submit">Sign In</button>
