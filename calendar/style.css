@@ -4,18 +4,28 @@
 
     table {
         width: 100%;
+        border-collapse: collapse;
 
         th, td {
             border: 1px solid black;
-            padding: 5px;
+            padding: 0;
             width: calc(100%/7);
-            height: auto;
-            aspect-ratio: 1;
         }
 
-        th {
+        .calendar-header {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+
             text-align: center;
             text-transform: uppercase;
+        }
+
+        .calendar-cell {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            padding: 5px;
+            box-sizing: border-box;
         }
     }
 }
