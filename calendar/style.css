@@ -1,5 +1,5 @@
 #calendar {
-    position: relative;
+    align-content: center;
     width: 90%;
 
     table {
@@ -10,15 +10,12 @@
             padding: 5px;
             width: calc(100%/7);
             height: auto;
+            aspect-ratio: 1;
         }
 
         th {
             text-align: center;
             text-transform: uppercase;
-        }
-
-        td {
-            aspect-ratio: 1.1;
         }
     }
 }
