@@ -13,10 +13,11 @@
 #navigate-calendar {
     display: flex;
     flex-direction: row;
+}
 
-    button {
-        height: 80%;
-    }
+.calendar-button {
+    height: 80%;
+    margin: auto 0;
 }
 
 #calendar table {
