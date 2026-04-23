@@ -3,9 +3,11 @@
     width: 90%;
 
     table {
+        width: 100%;
+
         th, td {
             border: 1px solid black;
-            margin: 5px;
+            padding: 5px;
             width: calc(100%/7);
             height: auto;
         }
