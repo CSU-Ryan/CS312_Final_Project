@@ -1,6 +1,7 @@
 #calendar {
     align-content: center;
-    width: 90%;
+    width: 80%;
+    margin: auto;
 }
 
 #calendar-header {
@@ -17,6 +18,7 @@
 
     h2 {
         margin: auto 0;
+        text-transform: uppercase;
     }
 }
 
