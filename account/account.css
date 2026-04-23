@@ -1,42 +1,48 @@
-form {
+.account-form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: auto;
 
-    width: 90%;
-    max-width: 150ex;
-    height: 100%;
-
-    h2 {
-        text-align: center;
-    }
-
-    .field {
-        margin: 10px;
-        padding: 10px;
-
-        display: flex;
-        flex-direction: row;
-        border: gray solid 1px;
-        border-radius: 10px;
-
-        label {
-            display: inline-block;
-            margin: auto;
-        }
-
-        input {
-            width: 70%;
-            margin-left: auto;
-        }
-    }
-
-    button {
-        display: block;
-        margin: auto;
+    form {
         width: 90%;
-        max-width: 150px;
+        max-width: 150ex;
+        height: 100%;
+
+        h2 {
+            text-align: center;
+        }
+
+        .field {
+            margin: 10px;
+            padding: 10px;
+
+            display: flex;
+            flex-direction: row;
+            border: gray solid 1px;
+            border-radius: 10px;
+
+            label {
+                display: inline-block;
+                margin: auto;
+            }
+
+            input {
+                width: 70%;
+                margin-left: auto;
+            }
+        }
+
+        button {
+            display: block;
+            margin: auto;
+            width: 90%;
+            max-width: 150px;
+        }
+    }
+
+    .switch-form {
+        padding: 10px;
     }
 }

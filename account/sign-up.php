@@ -34,7 +34,7 @@
             <button type="submit">Sign Up</button>
         </form>
 
-        <div>
+        <div class="switch-form">
             Already have an account? <a href="sign-in.php">Sign in here.</a>
         </div>
     </section>

@@ -29,7 +29,7 @@
             <button type="submit">Sign In</button>
         </form>
 
-        <div>
+        <div class="switch-form">
             Don't have an account? <a href="sign-up.php">Sign up here.</a>
         </div>
     </section>
