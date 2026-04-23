@@ -16,13 +16,17 @@
         <form action="#" method="post">
             <h2>Sign In</h2>
 
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" placeholder="Username" required>
+            <div class="field">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Username" required>
+            </div>
 
+            <div class="field">
             <label for="password">Password</label>
             <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
 
-            <button type="submit">Sign in</button>
+            <button type="submit">Sign In</button>
         </form>
 
         <div>

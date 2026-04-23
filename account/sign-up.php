@@ -16,14 +16,20 @@
         <form action="#" method="post">
             <h2>Sign Up</h2>
 
-            <label for="email">Email address</label>
-            <input type="email" name="email" id="email" placeholder="Email address" required>
+            <div class="field">
+                <label for="email">Email address</label>
+                <input type="email" name="email" id="email" placeholder="Email address" required>
+            </div>
 
-            <label for="username">Username</label>
-            <input type="text" name="username" id="username" placeholder="Username" required>
+            <div class="field">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="Username" required>
+            </div>
 
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" placeholder="Password" required>
+            <div class="field">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Password" required>
+            </div>
 
             <button type="submit">Sign Up</button>
         </form>
