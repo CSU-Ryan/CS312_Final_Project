@@ -1,0 +1,22 @@
+#calendar {
+    position: relative;
+    width: 90%;
+
+    table {
+        border: gray solid 1px;
+
+        th {
+            padding: 5px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        td {
+            width: calc(90%/7);
+            min-width: 10ex;
+            aspect-ratio: 1.1;
+
+            padding: 5px;
+        }
+    }
+}
