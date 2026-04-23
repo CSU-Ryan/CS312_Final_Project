@@ -1,7 +1,9 @@
 <section id='calendar'>
     <div id='calendar-header'>
-        <button id='prior-month' class='calendar-button'>Last Month Year</button>
-        <button id='next-month' class='calendar-button'>Next Month Year</button>
+        <div id='navigate-calendar'>
+            <button id='prior-month' class='calendar-button'>Last Month Year</button>
+            <button id='next-month' class='calendar-button'>Next Month Year</button>
+        </div>
 
         <h2 id='month-header'>Month Year</h2>
 
