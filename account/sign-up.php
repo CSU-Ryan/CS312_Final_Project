@@ -17,7 +17,7 @@
             <h2>Sign Up</h2>
 
             <div class="field">
-                <label for="email">Email address</label>
+                <label for="email">Email</label>
                 <input type="email" name="email" id="email" placeholder="Email address" required>
             </div>
 
