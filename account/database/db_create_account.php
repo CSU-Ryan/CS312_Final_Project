@@ -11,6 +11,7 @@ if ($_POST['email'] && $_POST['username'] && $_POST['password']) {
     $password = $_POST['password'];
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
+    /** @noinspection PhpUndefinedVariableInspection */
     $doesEmailExist = $conn->prepare("SELECT email FROM users WHERE email=?");
     $doesEmailExist->bind_param("s", $email);
     $doesEmailExist->execute();

@@ -9,6 +9,7 @@ if ($_POST['username'] && $_POST['password']) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
+    /** @noinspection PhpUndefinedVariableInspection */
     $fetchAccount = $conn->prepare("SELECT id, password FROM users WHERE username=?");
     $fetchAccount->bind_param("s", $username);
     $fetchAccount->execute();

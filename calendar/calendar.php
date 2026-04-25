@@ -24,12 +24,12 @@
         </tr>
         <?php
             for ($i = 0; $i < 5; $i++) {
-                echo "<tr id='row-{$i}'>";
+                echo "<tr id='row-$i'>";
                 for ($j = 0; $j < 7; $j++) {
-                    echo "<td><div id='calendar-{$i}-{$j}' class='calendar-cell'></div></td>";
-                };
+                    echo "<td><div id='calendar-$i-$j' class='calendar-cell'></div></td>";
+                }
                 echo "</tr>";
-            };
+            }
         ?>
     </table>
 </section>
