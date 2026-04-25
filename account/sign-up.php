@@ -1,3 +1,7 @@
+<?php
+    include 'database/db_create_account.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
