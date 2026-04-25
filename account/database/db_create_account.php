@@ -25,7 +25,7 @@ if ($_POST['email'] && $_POST['username'] && $_POST['password']) {
 
         if ($newEntry->execute()) {
             $message = 'Account created';
-            header('Location: sign-in.php');
+            header('Location: ./sign-in.php');
             exit();
         } else {
             $message = 'Failed to create account: ' . $conn->error;
