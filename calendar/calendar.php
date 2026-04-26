@@ -4,7 +4,7 @@
     $date = strtotime($_GET['d']);
 
     $first_day_index = date('w', strtotime("Y-m-01", $date));
-    $days_in_month = (date('t', $date));
+    $days_in_month = intval(date('t', $date));
 ?>
 
 <section id='calendar'>
