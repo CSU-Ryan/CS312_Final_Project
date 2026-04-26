@@ -1,4 +1,5 @@
 <?php
+    $message = '';
     include 'database/db_create_account.php';
 ?>
 
@@ -33,6 +34,10 @@
             <div class="field">
                 <label for="password">Password</label>
                 <input type="password" name="password" id="password" placeholder="Password" required>
+            </div>
+
+            <div class="message">
+                <p><?php echo $message; ?></p>
             </div>
 
             <button type="submit">Sign Up</button>

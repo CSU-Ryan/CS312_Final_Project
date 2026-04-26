@@ -1,4 +1,5 @@
 <?php
+    $message = '';
     include 'database/db_connect_account.php';
 ?>
 
@@ -28,6 +29,10 @@
             <div class="field">
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+
+            <div class="message">
+                <p><?php echo $message; ?></p>
             </div>
 
             <button type="submit">Sign In</button>
