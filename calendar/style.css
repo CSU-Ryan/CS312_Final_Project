@@ -52,4 +52,8 @@
         padding: 5px;
         box-sizing: border-box;
     }
+
+    .invalid-cell {
+        background-color: gray;
+    }
 }
