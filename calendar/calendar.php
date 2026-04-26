@@ -39,17 +39,17 @@
         </tr>
         <?php
             $counting = false;
-            $day_index = $first_day_index;
+            $day_index = 0;
             for ($i = 0; $i < 5; $i++) {
                 echo "<tr id='row-$i'>";
                 for ($j = 0; $j < 7; $j++) {
-                    if ($day_index == $j) { $counting = true; }
+                    if ($first_day_index == $j) { $counting = true; }
 
                     echo "<td><div id='calendar-$i-$j' class='calendar-cell'>" .
                         "<div class='day-label'>" . ($day_index + 1 ? $counting : '') . "</div>" .
                         "</div></td>";
 
-                    $day_index++;
+                    if ($counting) $day_index++;
                     if ($day_index >= $days_in_month) { $counting = false; }
                 }
                 echo "</tr>";
