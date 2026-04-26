@@ -3,7 +3,7 @@ include 'db_connect.php';
 
 $message = '';
 
-if ($_POST['email'] && $_POST['username'] && $_POST['password']) {
+if (isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password'])) {
     // Checks if form data has already been submitted
 
     $email = $_POST['email'];
