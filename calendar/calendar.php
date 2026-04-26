@@ -11,7 +11,7 @@
     <div id='calendar-header'>
         <div>
             <button id='prior-month' class='calendar-button'>
-                <?php echo date_create($date)->add(new DateInterval("P-1M"))->format('M Y'); ?>
+                <?php echo date_create($date)->sub(new DateInterval("P1M"))->format('M Y'); ?>
             </button>
             <button id='next-month' class='calendar-button'>
                 <?php echo date_create($date)->add(new DateInterval("P1M"))->format('M Y'); ?>
