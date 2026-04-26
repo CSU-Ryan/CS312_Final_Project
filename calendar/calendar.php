@@ -4,17 +4,17 @@
     $date = strtotime($_GET['d']);
 
     $first_day_index = date('w', strtotime("Y-m-01", $date));
-    $days_in_month = date('t', $date);
+    $days_in_month = (date('t', $date));
 ?>
 
 <section id='calendar'>
     <div id='calendar-header'>
         <div>
             <button id='prior-month' class='calendar-button'>
-                <?php echo date('M Y', strtotime("last month", $date)); ?>
+                <?php echo date_create($date)->add(new DateInterval("P-1M"))->format('M Y'); ?>
             </button>
             <button id='next-month' class='calendar-button'>
-                <?php echo date('M Y', strtotime("next month", $date)); ?>
+                <?php echo date_create($date)->add(new DateInterval("P1M"))->format('M Y'); ?>
             </button>
         </div>
 
