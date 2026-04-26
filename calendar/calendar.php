@@ -4,6 +4,7 @@
     $date = strtotime($_GET['d']);
 
     $first_day_index = date('w', strtotime("Y-m-01", $date));
+    $days_in_month = date('t', $date);
 ?>
 
 <section id='calendar'>
@@ -37,15 +38,19 @@
             <th><div id='sat' class='calendar-header'>Saturday</div></th>
         </tr>
         <?php
-            $started_counting = false;
+            $counting = false;
             $day_index = $first_day_index;
             for ($i = 0; $i < 5; $i++) {
                 echo "<tr id='row-$i'>";
                 for ($j = 0; $j < 7; $j++) {
-                    if ($day_index == $j) { $started_counting = true; }
+                    if ($day_index == $j) { $counting = true; }
+
                     echo "<td><div id='calendar-$i-$j' class='calendar-cell'>" .
-                        "<div class='day-label'>" . ($day_index + 1 ? $started_counting : '') . "</div>" .
+                        "<div class='day-label'>" . ($day_index + 1 ? $counting : '') . "</div>" .
                         "</div></td>";
+
+                    $day_index++;
+                    if ($day_index >= $days_in_month) { $counting = false; }
                 }
                 echo "</tr>";
             }
