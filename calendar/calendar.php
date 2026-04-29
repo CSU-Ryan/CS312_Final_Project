@@ -49,7 +49,7 @@
                         "<div class='day-label'>" . ($day_index + 1 ? $counting : '') . "</div>" .
                         "</div></td>";
 
-                    if ($counting) { $day_index++; }
+                    if ($counting) { $day_index += 1; }
                     if ($day_index >= $days_in_month) { $counting = false; }
                 }
                 echo "</tr>";
