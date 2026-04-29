@@ -43,9 +43,10 @@
                 for ($j = 0; $j < 7; $j++) {
                     $day_index = $i * 7 + $j + 1 - $first_day_index;
                     $in_range = ($day_index > 0) && ($day_index < $days_in_month);
+                    $day_number = ($in_range) ? $day_index : '';
 
                     echo "<td><div id='calendar-$i-$j' class='calendar-cell'>" .
-                        "<div class='day-label'>" . ($day_index ? $in_range  : '') . "</div>" .
+                        "<div class='day-label'>" . $day_number . "</div>" .
                         "</div></td>";
                 }
                 echo "</tr>";
