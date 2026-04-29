@@ -19,5 +19,3 @@
 </body>
 
 </html>
-
-<script src="./calendar.js"></script>

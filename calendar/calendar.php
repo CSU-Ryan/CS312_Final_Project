@@ -1,6 +1,6 @@
 <?php
     session_start();
-    $_GET['d'] = $_GET['d'] ?? date('m-d-Y');
+    $_GET['d'] = $_GET['d'] ?? date('m-Y');
     $date = strtotime($_GET['d']);
 
     $first_day_index = date('w', strtotime("Y-m-01", $date));
@@ -42,11 +42,11 @@
                 echo "<tr id='row-$i'>";
                 for ($j = 0; $j < 7; $j++) {
                     $day_index = $i * 7 + $j + 1 - $first_day_index;
-                    $in_range = ($day_index > 0) && ($day_index < $days_in_month);
-                    $day_number = ($in_range) ? $day_index : '';
+                    $in_range = ($day_index > 0) && ($day_index <= $days_in_month);
+                    $date = ($in_range) ? date("Y-m-$day_index", $date) : '';
 
-                    echo "<td><div id='calendar-$i-$j' class='calendar-cell'>" .
-                        "<div class='day-label'>" . $day_number . "</div>" .
+                    echo "<td class='calendar-cell' id='calendar-$i-$j' cell_date='$date'><div>" .
+                        "<div class='day-label'></div>" .
                         "<div class='event-list'></div>" .
                         "</div></td>";
                 }
@@ -56,3 +56,4 @@
     </table>
 </section>
 
+<script src="./calendar.js"></script>
