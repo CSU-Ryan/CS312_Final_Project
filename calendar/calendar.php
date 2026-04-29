@@ -38,19 +38,15 @@
             <th><div id='sat' class='calendar-header'>Saturday</div></th>
         </tr>
         <?php
-            $counting = false;
-            $day_index = 0;
             for ($i = 0; $i < 5; $i++) {
                 echo "<tr id='row-$i'>";
                 for ($j = 0; $j < 7; $j++) {
-                    if ($first_day_index == $j) { $counting = true; }
+                    $day_index = $i * 7 + $j + 1 - $first_day_index;
+                    $in_range = ($day_index > 0) && ($day_index < $days_in_month);
 
                     echo "<td><div id='calendar-$i-$j' class='calendar-cell'>" .
-                        "<div class='day-label'>" . ($day_index + 1 ? $counting : '') . "</div>" .
+                        "<div class='day-label'>" . ($day_index ? $in_range  : '') . "</div>" .
                         "</div></td>";
-
-                    if ($counting) { $day_index += 1; }
-                    if ($day_index >= $days_in_month) { $counting = false; }
                 }
                 echo "</tr>";
             }
