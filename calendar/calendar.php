@@ -47,6 +47,7 @@
 
                     echo "<td><div id='calendar-$i-$j' class='calendar-cell'>" .
                         "<div class='day-label'>" . $day_number . "</div>" .
+                        "<div class='event-list'></div>" .
                         "</div></td>";
                 }
                 echo "</tr>";
