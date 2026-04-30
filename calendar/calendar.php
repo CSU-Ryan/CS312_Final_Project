@@ -10,6 +10,11 @@
 
     $first_day_index = date('w', strtotime("Y-m-01", $date));
     $days_in_month = intval(date('t', $date));
+
+    if (!$first_day_index || !$days_in_month) {
+        echo "ERROR: invalid date";
+        die();
+    }
 ?>
 
 <section id='calendar'>
