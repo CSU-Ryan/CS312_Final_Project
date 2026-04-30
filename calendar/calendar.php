@@ -5,12 +5,12 @@
     }
 
     session_start();
-    $_GET['d'] = $_GET['d'] ?? date('m-Y');
+    $_GET['d'] = $_GET['d'] ?? date('Y-m-d');
     $date = strtotime("{$_GET['d']}");
 
     if (!$date) {
-        echo "ERROR: invalid date";
-        die();
+        $_GET['d'] = date('Y-m-d');
+        $date = strtotime("{$_GET['d']}");
     }
 
     $first_day_index = date('w', strtotime("Y-m-01", $date));
