@@ -1,4 +1,4 @@
-import { Temporal } from "@js-temporal/polyfill";
+import { Temporal } from "https://esm.sh/@js-temporal/polyfill";
 
 function initializeDate() {
     let date_string = $(this).attr("cell-date");
