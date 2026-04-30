@@ -1,4 +1,8 @@
-<form action=".." method="POST">
+<?php
+    include 'parse_form.php';
+?>
+
+<form method="POST">
     <div><label for="name">
         Event Name:
         <input type="text" name="name" required>
@@ -31,6 +35,8 @@
         Description (Optional):
         <textarea name="description"></textarea>
     </label></div>
+
+    <div id="Validation"><?php echo $message; ?></div>
 
     <div><button type="submit">Create New Event</button></div>
 </form>
