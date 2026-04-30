@@ -28,7 +28,7 @@
 
         <h2 id='month-header'></h2>
 
-        <div id='create-event'>
+        <div>
             <button id='new-event' class='calendar-button'>Create New Event</button>
         </div>
     </div>
