@@ -51,11 +51,11 @@ $(document).ready(function () {
     initializeMonthText();
 
     $("#prior-month").click(function () {
-        window.location.href = "#?d=" + month.add({months: -1}).toString();
+        window.location.href = "?d=" + month.add({months: -1}).toString();
     })
 
     $("#next-month").click(function () {
-        window.location.href = "#?d=" + month.add({months: 1}).toString();
+        window.location.href = "?d=" + month.add({months: 1}).toString();
     })
 
 })
