@@ -1,13 +1,13 @@
 <form action=".." method="POST">
-    <label for="name">
+    <div><label for="name">
         Event Name:
         <input type="text" name="name" placeholder="..." required>
-    </label>
+    </label></div>
 
-    <label for="date">
+    <div><label for="date">
         Date:
         <input type="date" name="date" placeholder="_/_/_" required>
-    </label>
+    </label></div>
 
     <div id="event-time">
         Event Time:
@@ -22,15 +22,15 @@
         </label>
     </div>
 
-    <label for="location">
+    <div><label for="location">
         Location (Optional):
         <input type="text" name="location" placeholder="...">
-    </label>
+    </label></div>
 
-    <label for="description">
+    <div><label for="description">
         Description (Optional):
         <textarea name="description" placeholder="..."></textarea>
-    </label>
+    </label></div>
 
-    <button type="submit">Create New Event</button>
+    <div><button type="submit">Create New Event</button></div>
 </form>
