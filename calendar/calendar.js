@@ -32,7 +32,7 @@ function initializeButtonText() {
 $(document).ready(function () {
 
     $(".calendar-cell").each(initializeDate);
-    console.log(month);
+    console.log("Recorded Month: " + month);
 
     initializeButtonText();
 
