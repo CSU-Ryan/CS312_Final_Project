@@ -17,21 +17,28 @@ function initializeDate() {
 }
 
 function initializeMonthText() {
-    let format = new Intl.DateTimeFormat(
-        "en-US",
-        { year: "numeric", month: "short" }
-    );
-
     $("#prior-month").text(
-        format.format(month.add({months: -1}))
+        month.add({months: -1})
+            .toLocaleString(
+                "en-US",
+                { year: "numeric", month: "short" }
+            )
     );
 
     $("#next-month").text(
-        format.format(month.add({months: 1}))
+        month.add({months: 1})
+            .toLocaleString(
+                "en-US",
+                { year: "numeric", month: "short" }
+            )
     );
 
     $("#month-header").text(
-        format.format(month)
+        month.add({months: 0})
+            .toLocaleString(
+            "en-US",
+            { year: "numeric", month: "short" }
+        )
     );
 }
 
