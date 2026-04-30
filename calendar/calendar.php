@@ -60,4 +60,4 @@
     </table>
 </section>
 
-<script src="./calendar.js" type="module"></script>
+<script src="./calendar.js"></script>
