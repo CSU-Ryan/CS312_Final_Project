@@ -43,7 +43,7 @@
                 for ($j = 0; $j < 7; $j++) {
                     $day_index = $i * 7 + $j + 1 - $first_day_index;
                     $in_range = ($day_index > 0) && ($day_index <= $days_in_month);
-                    $date = ($in_range) ? date("Y-m-$day_index", $date) : '';
+                    $date = ($in_range) ? (date("Y-m-", $date) . $day_index) : '';
 
                     echo "<td class='calendar-cell' id='calendar-$i-$j' cell_date='$date'><div>" .
                         "<div class='day-label'></div>" .
