@@ -1,4 +1,4 @@
-const {Temporal} = require("@js-temporal/polyfill");
+import { Temporal } from "@js-temporal/polyfill";
 
 function initializeDate() {
     let date_string = $(this).attr("cell-date");
