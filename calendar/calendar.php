@@ -1,7 +1,7 @@
 <?php
     session_start();
     $_GET['d'] = $_GET['d'] ?? date('m-Y');
-    $date = strtotime($_GET['d']);
+    $date = strtotime("1-{$_GET['d']}");
 
     $first_day_index = date('w', strtotime("Y-m-01", $date));
     $days_in_month = intval(date('t', $date));
@@ -43,7 +43,7 @@
                 for ($j = 0; $j < 7; $j++) {
                     $day_index = $i * 7 + $j + 1 - $first_day_index;
                     $in_range = ($day_index > 0) && ($day_index <= $days_in_month);
-                    $date = ($in_range) ? (date("Y-m-", $date) . $day_index) : '';
+                    $date = ($in_range) ? date("Y-m-$day_index", $date) : '';
 
                     echo "<td class='calendar-cell' id='calendar-$i-$j' cell_date='$date'><div>" .
                         "<div class='day-label'></div>" .
