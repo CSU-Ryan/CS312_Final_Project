@@ -16,15 +16,22 @@ function initializeDate() {
     }
 }
 
-function initializeButtonText() {
+function initializeMonthText() {
+    let format = new Intl.DateTimeFormat(
+        "en-US",
+        { year: "numeric", month: "short" }
+    );
+
     $("#prior-month").text(
-        month.add({months: -1})
-            .toLocaleString("en-US", { year: "numeric", month: "short" })
+        format.format(month.add({months: -1}))
     );
 
     $("#next-month").text(
-        month.add({months: 1})
-            .toLocaleString("en-US", { year: "numeric", month: "short" })
+        format.format(month.add({months: 1}))
+    );
+
+    $("#month-header").text(
+        format.format(month)
     );
 }
 
@@ -34,7 +41,7 @@ $(document).ready(function () {
     $(".calendar-cell").each(initializeDate);
     console.log("Recorded Month: " + month.toString());
 
-    initializeButtonText();
+    initializeMonthText();
 
     $("#prior-month").click(function () {
         window.location.href = "#?d=" + month.add({months: -1}).toString();
