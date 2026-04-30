@@ -3,8 +3,8 @@ $message = '';
 
 function validTimeRange($startTime, $endTime): bool
 {
-    $startTime = strtotime("h:i", $startTime);
-    $endTime = strtotime("h:i", $endTime);
+    $startTime = strtotime($startTime);
+    $endTime = strtotime($endTime);
     return $endTime > $startTime;
 }
 
