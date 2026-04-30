@@ -46,7 +46,7 @@
         text-transform: uppercase;
     }
 
-    .calendar-cell div {
+    .calendar-cell > div {
         width: 100%;
         aspect-ratio: 1.3 / 1;
         padding: 5px;
