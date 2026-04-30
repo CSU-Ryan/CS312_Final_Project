@@ -1,6 +1,6 @@
 import { Temporal } from 'https://cdn.jsdelivr.net/npm/@js-temporal/polyfill/+esm';
 
-let month = Temporal.PlainYearMonth();
+let month;
 
 function initializeDate() {
     let date_string = $(this).attr("cell-date");
