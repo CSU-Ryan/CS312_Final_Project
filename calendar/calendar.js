@@ -19,12 +19,12 @@ function initializeDate() {
 function initializeButtonText() {
     $("#prior-month").text(
         month.add({months: -1})
-            .toLocaleString("en-US", { year: "full", month: "short" })
+            .toLocaleString("en-US", { year: "numeric", month: "short" })
     );
 
     $("#next-month").text(
         month.add({months: 1})
-            .toLocaleString("en-US", { year: "full", month: "short" })
+            .toLocaleString("en-US", { year: "numeric", month: "short" })
     );
 }
 
