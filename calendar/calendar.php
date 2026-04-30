@@ -3,6 +3,11 @@
     $_GET['d'] = $_GET['d'] ?? date('m-Y');
     $date = strtotime("1-{$_GET['d']}");
 
+    if (!$date) {
+        echo "ERROR: invalid date";
+        die();
+    }
+
     $first_day_index = date('w', strtotime("Y-m-01", $date));
     $days_in_month = intval(date('t', $date));
 ?>
