@@ -1,7 +1,7 @@
 <?php
     session_start();
     $_GET['d'] = $_GET['d'] ?? date('m-Y');
-    $date = strtotime("1-{$_GET['d']}");
+    $date = strtotime("{$_GET['d']}");
 
     if (!$date) {
         echo "ERROR: invalid date";
@@ -47,9 +47,9 @@
                 for ($j = 0; $j < 7; $j++) {
                     $day_index = $i * 7 + $j + 1 - $first_day_index;
                     $in_range = ($day_index > 0) && ($day_index <= $days_in_month);
-                    $date = ($in_range) ? date("Y-m-$day_index", $date) : '';
+                    $cell_date = ($in_range) ? date("Y-m-$day_index", $date) : '';
 
-                    echo "<td class='calendar-cell' id='calendar-$i-$j' cell_date='$date'><div>" .
+                    echo "<td class='calendar-cell' id='calendar-$i-$j' cell_date='$cell_date'><div>" .
                         "<div class='day-label'></div>" .
                         "<div class='event-list'></div>" .
                         "</div></td>";
