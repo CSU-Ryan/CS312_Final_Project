@@ -15,17 +15,11 @@
 <section id='calendar'>
     <div id='calendar-header'>
         <div>
-            <button id='prior-month' class='calendar-button'>
-                <?php echo date_create($date)->sub(new DateInterval("P1M"))->format('M Y'); ?>
-            </button>
-            <button id='next-month' class='calendar-button'>
-                <?php echo date_create($date)->add(new DateInterval("P1M"))->format('M Y'); ?>
-            </button>
+            <button id='prior-month' class='calendar-button'></button>
+            <button id='next-month' class='calendar-button'></button>
         </div>
 
-        <h2 id='month-header'>
-            <?php echo date('M Y'); ?>
-        </h2>
+        <h2 id='month-header'></h2>
 
         <div id='create-event'>
             <button id='new-event' class='calendar-button'>Create New Event</button>
