@@ -10,7 +10,7 @@ function initializeDate() {
         let date = Temporal.PlainDate.from(date_string);
         $(this).find(".day-label").text(date.day);
 
-        if (!month) month = date.toPlainYearMonth();
+        if (!month) month = date;
     } else {
         $(this).addClass("invalid-cell");
     }
@@ -19,12 +19,12 @@ function initializeDate() {
 function initializeButtonText() {
     $("#prior-month").text(
         month.add({months: -1})
-            .toLocaleString("en-US", { dateStyle: "full" })
+            .toLocaleString("en-US", { year: "full", month: "short" })
     );
 
     $("#next-month").text(
         month.add({months: 1})
-            .toLocaleString("en-US", { dateStyle: "full" })
+            .toLocaleString("en-US", { year: "full", month: "short" })
     );
 }
 
