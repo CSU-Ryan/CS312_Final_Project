@@ -32,16 +32,16 @@ function initializeButtonText() {
 $(document).ready(function () {
 
     $(".calendar-cell").each(initializeDate);
-    console.log("Recorded Month: " + month);
+    console.log("Recorded Month: " + month.toString());
 
     initializeButtonText();
 
     $("#prior-month").click(function () {
-        window.location.href = "#?d=" + month.add({months: -1});
+        window.location.href = "#?d=" + month.add({months: -1}).toString();
     })
 
     $("#next-month").click(function () {
-        window.location.href = "#?d=" + month.add({months: 1});
+        window.location.href = "#?d=" + month.add({months: 1}).toString();
     })
 
 })
