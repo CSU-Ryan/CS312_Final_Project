@@ -1,4 +1,9 @@
 <?php
+    function pad($str, $len): string
+    {
+        return str_pad($str, $len, "0", STR_PAD_LEFT);
+    }
+
     session_start();
     $_GET['d'] = $_GET['d'] ?? date('m-Y');
     $date = strtotime("{$_GET['d']}");
@@ -45,7 +50,7 @@
             for ($i = 0; $i < 5; $i++) {
                 echo "<tr id='row-$i'>";
                 for ($j = 0; $j < 7; $j++) {
-                    $day_index = $i * 7 + $j + 1 - $first_day_index;
+                    $day_index = pad($i * 7 + $j + 1 - $first_day_index,2);
                     $in_range = ($day_index > 0) && ($day_index <= $days_in_month);
                     $cell_date = ($in_range) ? date("Y-m-$day_index", $date) : '';
 
