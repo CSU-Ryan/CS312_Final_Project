@@ -49,7 +49,7 @@
                     $in_range = ($day_index > 0) && ($day_index <= $days_in_month);
                     $cell_date = ($in_range) ? date("Y-m-$day_index", $date) : '';
 
-                    echo "<td class='calendar-cell' id='calendar-$i-$j' cell_date='$cell_date'><div>" .
+                    echo "<td class='calendar-cell' id='calendar-$i-$j' cell-date='$cell_date'><div>" .
                         "<div class='day-label'></div>" .
                         "<div class='event-list'></div>" .
                         "</div></td>";
