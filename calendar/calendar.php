@@ -15,6 +15,8 @@
 
     $first_day_index = intval(date('w', strtotime(date("Y-m-01", $date))));
     $days_in_month = intval(date('t', $date));
+
+    $row_count = ceil(($days_in_month + $first_day_index) / 7);
 ?>
 
 <section id='calendar'>
@@ -42,7 +44,7 @@
             <th><div id='sat' class='calendar-header'>Saturday</div></th>
         </tr>
         <?php
-            for ($i = 0; $i < 5; $i++) {
+            for ($i = 0; $i < $row_count; $i++) {
                 echo "<tr id='row-$i'>";
                 for ($j = 0; $j < 7; $j++) {
                     $day_index = pad($i * 7 + $j + 1 - $first_day_index,2);
