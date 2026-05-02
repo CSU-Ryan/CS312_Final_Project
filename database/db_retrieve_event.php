@@ -20,6 +20,7 @@ if (isset($_SESSION['user_id']) && isset($_GET['event_id'])) {
     if ($fetchEvent->num_rows > 0) {
         $success = true;
         $fetchEvent->bind_result($name, $date, $start, $end, $location, $description);
+        $fetchEvent->fetch();
     } else {
         $success = false;
         $message = "Event not found";
