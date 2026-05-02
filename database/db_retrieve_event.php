@@ -21,4 +21,7 @@ if (isset($_SESSION['user_id']) && isset($_POST['event_id'])) {
         $success = false;
         $message = "Event not found";
     }
+} else {
+    $success = false;
+    $message = "Error: No event id provided";
 }
