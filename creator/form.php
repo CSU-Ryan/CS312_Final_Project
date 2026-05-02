@@ -4,6 +4,8 @@
 
 <section id="event-creator">
     <form method="POST">
+        <h2>New Event</h2>
+
         <div class="field"><label for="name">
             Event Name:
             <input type="text" name="name" required>
