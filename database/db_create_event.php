@@ -15,10 +15,10 @@ function get_next_event_id($conn, $user_id) {
 
 session_start();
 
-if (!isset($_SESSION['id'])) return;
+if (!isset($_SESSION['user_id'])) return;
 include 'db_connect.php';
 
-$user_id = $_SESSION['id'];
+$user_id = $_SESSION['user_id'];
 $event_id = get_next_event_id($conn, $user_id);
 $name = $_POST['name'];
 $date = $_POST['date'];

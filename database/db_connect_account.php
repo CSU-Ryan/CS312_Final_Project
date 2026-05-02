@@ -23,7 +23,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
             $message = 'Login successful';
 
             session_start();
-            $_SESSION['id'] = $db_id;
+            $_SESSION['user_id'] = $db_id;
             header('Location: ../index.php');
             exit();
         } else {
