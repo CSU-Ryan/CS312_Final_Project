@@ -4,7 +4,7 @@ include '../database/db_retrieve_event.php';
 
 <section id="event-viewer">
 
-    <div class='error-message'><?php echo $message; ?></div>;
+    <div class='error-message'><?php echo $message; ?></div>
 
     <h2 id="event-name"><?php echo $name; ?></h2>
 
