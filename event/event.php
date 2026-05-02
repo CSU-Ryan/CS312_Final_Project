@@ -3,11 +3,8 @@ include '../database/db_retrieve_event.php';
 ?>
 
 <section id="event-viewer">
-    <?php
-    if (!$success) {
-        echo "<div class='error-message'>" . $message . "</div>";
-    }
-    ?>
+
+    <div class='error-message'><?php echo $message; ?></div>;
 
     <h2 id="event-name"><?php echo $name; ?></h2>
 

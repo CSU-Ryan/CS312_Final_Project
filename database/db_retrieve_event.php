@@ -11,6 +11,7 @@ if (isset($_SESSION['user_id']) && isset($_GET['event_id'])) {
     $user_id = $_SESSION['user_id'];
     $event_id = $_GET['event_id'];
 
+    /** @noinspection PhpUndefinedVariableInspection */
     $fetchEvent = $conn->prepare("SELECT name, date, start, end, location, description FROM events WHERE user_id = ? AND event_id = ?");
     $fetchEvent->bind_param('ii', $user_id, $event_id);
     $fetchEvent->execute();
