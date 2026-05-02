@@ -35,7 +35,7 @@ $description = $_POST['description'] ?? null;
 /** @noinspection PhpUndefinedVariableInspection */
 $new_entry = $conn->prepare("INSERT INTO events (user_id, event_id, name, date, start, end, location, description) 
                                    VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-$new_entry->bind_param("issssss",
+$new_entry->bind_param("iissssss",
     $user_id, $event_id, $name, $date, $start, $end, $location, $description);
 
 if ($new_entry->execute()) {
