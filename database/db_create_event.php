@@ -1,16 +1,19 @@
 <?php
 
-function get_next_event_id($conn, $user_id) {
-    $fetchMaxId = $conn->query("SELECT MAX(event_id) FROM events WHERE user_id = ?");
+function get_next_event_id($conn, $user_id): int
+{
+    $fetchMaxId = $conn->prepare("SELECT MAX(event_id) AS previous_id FROM events WHERE user_id = ?");
     $fetchMaxId->bind_param('i', $user_id);
     $fetchMaxId->execute();
-    $fetchMaxId->store_result();
 
-    if ($fetchMaxId->num_rows > 0) {
-        return intval($fetchMaxId->fetch()) + 1;
-    } else {
+    $fetchMaxId->bind_result($previous_id);
+    $fetchMaxId->fetch();
+
+    if (is_null($previous_id)) {
         return 1;
     }
+
+    return intval($previous_id) + 1;
 }
 
 if (session_status() === PHP_SESSION_NONE) {
