@@ -1,0 +1,39 @@
+#event-viewer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+    .error-message {
+        text-align: center;
+        color: red;
+        font-weight: bold;
+    }
+
+    #event-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+
+        border: 2px solid gray;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .event-detail em {
+        font-weight: bold;
+        margin-right: 5px;
+        padding: 2px;
+        border: 1px solid gray;
+        border-radius: 2px;
+    }
+
+    #event-description p {
+        padding: 2px;
+        border: 1px solid gray;
+        border-radius: 2px;
+    }
+}
