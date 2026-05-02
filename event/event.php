@@ -6,7 +6,6 @@ include '../database/db_retrieve_event.php';
     <?php
     if (!$success) {
         echo "<div class='error-message'>" . $message . "</div>";
-        die();
     }
     ?>
 
