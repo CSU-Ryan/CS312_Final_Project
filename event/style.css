@@ -23,12 +23,16 @@
         border-radius: 5px;
     }
 
+    .event-detail {
+        margin: 10px;
+        width: 90%;
+        max-width: 50ex;
+    }
+
     .event-detail em {
         font-weight: bold;
+        text-decoration: underline;
         margin-right: 5px;
-        padding: 2px;
-        border: 1px solid gray;
-        border-radius: 2px;
     }
 
     #event-description p {
