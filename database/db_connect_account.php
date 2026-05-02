@@ -22,7 +22,9 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         if (password_verify($password, $db_password)) {
             $message = 'Login successful';
 
-            session_start();
+            if (session_status() === PHP_SESSION_NONE) {
+                session_start();
+            }
             $_SESSION['user_id'] = $db_id;
             header('Location: ../index.php');
             exit();

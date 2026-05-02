@@ -4,7 +4,9 @@
         return str_pad($str, $len, "0", STR_PAD_LEFT);
     }
 
-    session_start();
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
     $_GET['d'] = $_GET['d'] ?? date('Y-m-d');
     $date = strtotime("{$_GET['d']}");
 

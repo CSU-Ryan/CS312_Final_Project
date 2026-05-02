@@ -13,8 +13,9 @@ function get_next_event_id($conn, $user_id) {
     }
 }
 
-session_start();
-
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 if (!isset($_SESSION['user_id'])) return;
 include 'db_connect.php';
 
