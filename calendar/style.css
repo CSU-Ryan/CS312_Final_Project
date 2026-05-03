@@ -66,5 +66,15 @@
         width: 100%;
         display: flex;
         flex-direction: column;
+
+        .calendar-event {
+            width: 95%;
+            overflow: scroll;
+            padding: 1px;
+            margin: 1px auto;
+            border: 1px solid gray;
+            background-color: rgb(128 128 128 / 0.75);
+
+        }
     }
 }
