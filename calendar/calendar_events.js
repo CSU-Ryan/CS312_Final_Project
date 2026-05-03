@@ -30,12 +30,15 @@ $(document).ready(function () {
         get: (searchParams, prop) => searchParams.get(prop),
     });
 
-    if (!params.d) {
+    let date;
+    if (params.d) {
+        date = params.d;
+    } else {
         const today = new Date();
-        params.d = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
+        date = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
     }
 
-    const queryUrl = `../database/db_retrieve_month_events.php?d=${params.d}`;
+    const queryUrl = `../database/db_retrieve_month_events.php?d=${date}`;
     console.log("Querying: " + queryUrl);
     $.getJSON(queryUrl, calendar_events);
 })
