@@ -53,7 +53,7 @@
         box-sizing: border-box;
     }
 
-    .invalid-cell {
+    .calendar-cell:not([cell-date]) {
         background-color: gray;
     }
 

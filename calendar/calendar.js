@@ -2,23 +2,22 @@ import { Temporal } from 'https://cdn.jsdelivr.net/npm/@js-temporal/polyfill/+es
 
 let month;
 
-function initializeDate() {
+function initializeMonth() {
+    let month_string = $('.calendar-cell[cell-date]').attr("cell-date");
+    month = Temporal.PlainDate.from(month_string);
+}
+
+function initializeDayLabel() {
     let date_string = $(this).attr("cell-date");
+    let date = Temporal.PlainDate.from(date_string);
 
-    console.log("Given date string: " + date_string);
-    if (date_string) {
-        let date = Temporal.PlainDate.from(date_string);
-        $(this).find(".day-label").text(date.day);
-
-        if (!month) month = date;
-    } else {
-        $(this).addClass("invalid-cell");
-    }
+    $(this).find(".day-label").text(date.day);
 }
 
 function initializeMonthText() {
     $("#prior-month").text(
-        month.add({months: -1})
+        month
+            .add({months: -1})
             .toLocaleString(
                 "en-US",
                 { year: "numeric", month: "short" }
@@ -26,7 +25,8 @@ function initializeMonthText() {
     );
 
     $("#next-month").text(
-        month.add({months: 1})
+        month
+            .add({months: 1})
             .toLocaleString(
                 "en-US",
                 { year: "numeric", month: "short" }
@@ -34,19 +34,19 @@ function initializeMonthText() {
     );
 
     $("#month-header").text(
-        month.add({months: 0})
+        month
+            .add({months: 0})
             .toLocaleString(
-            "en-US",
-            { year: "numeric", month: "short" }
-        )
+                "en-US",
+                { year: "numeric", month: "short" }
+            )
     );
 }
 
-
 $(document).ready(function () {
+    initializeMonth();
 
-    $(".calendar-cell").each(initializeDate);
-    console.log("Recorded Month: " + month.toString());
+    $('.calendar-cell[cell-date]').each(initializeDayLabel);
 
     initializeMonthText();
 
