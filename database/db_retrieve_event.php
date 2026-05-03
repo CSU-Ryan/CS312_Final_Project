@@ -25,7 +25,10 @@ if (isset($_SESSION['user_id']) && isset($_GET['event_id'])) {
         $success = false;
         $message = "Event not found";
     }
+    $fetchEvent->close();
+
 } else {
     $success = false;
     $message = "Error: No event id provided";
 }
+$conn->close();
