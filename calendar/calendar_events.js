@@ -4,7 +4,7 @@ function make_event(event_data) {
     event.id = "event-" + event_data.event_id;
     event.className = "calendar-event";
 
-    event.innerHTML = `<em>${event.name}</em> ${event.start} - ${event.end}`;
+    event.innerHTML = `<em>${event_data.name}</em> ${event_data.start} - ${event_data.end}`;
 
     return event;
 }
