@@ -16,14 +16,13 @@ function calendar_events(response) {
     }
     console.log("Retrieving events...");
 
-    for (let i = 0; response.i; i++) {
-        let event_data = response.i;
+    $.each(response.events, function (i, event_data) {
         let event = make_event(event_data);
 
         $(`.calendar-cell[cell-date="${event.date}"]`)
             .find(".event-list")
             .append(event);
-    }
+    })
 }
 
 $(document).ready(function () {
