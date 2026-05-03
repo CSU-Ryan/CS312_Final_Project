@@ -16,7 +16,7 @@ function calendar_events(response) {
     }
 
     for (let i = 0; response.i; i++) {
-        let event_data = response.i
+        let event_data = response.i;
         let event = make_event(event_data);
 
         $(`.calendar-cell[cell-date="${event.date}"]`)
