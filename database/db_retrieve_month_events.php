@@ -18,7 +18,7 @@ if (isset($_SESSION['user_id']) && isset($_GET['d'])) {
     $fetchEvent->execute();
     $eventList = $fetchEvent->get_result();
 
-    if ($eventList->num_rows > 0) {
+    if ($eventList) {
         $rows['success'] = true;
         while ($row = $eventList->fetch_assoc()) {
             $rows[] = $row;
