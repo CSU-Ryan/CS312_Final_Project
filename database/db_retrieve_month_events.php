@@ -13,7 +13,7 @@ if (isset($_SESSION['user_id']) && isset($_GET['d'])) {
     $month = explode('-', $date)[1];
 
     /** @noinspection PhpUndefinedVariableInspection */
-    $fetchEvent = $conn->prepare("SELECT name, date, start, end FROM events WHERE user_id = ? AND MONTH(date) = ?");
+    $fetchEvent = $conn->prepare("SELECT event_id name, date, start, end FROM events WHERE user_id = ? AND MONTH(date) = ?");
     $fetchEvent->bind_param('ii', $user_id, $month);
     $fetchEvent->execute();
     $eventList = $fetchEvent->get_result();
