@@ -1,4 +1,5 @@
 <?php
+    $message = '';
     include 'parse_form.php';
 ?>
 

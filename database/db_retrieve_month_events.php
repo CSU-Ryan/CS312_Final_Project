@@ -23,11 +23,10 @@ if (isset($_SESSION['user_id']) && isset($_GET['d'])) {
         while ($row = $eventList->fetch_assoc()) {
             $rows[] = $row;
         }
-        echo json_encode($rows);
     } else {
         $rows['success'] = false;
-        echo json_encode($rows);
     }
+    echo json_encode($rows);
     $fetchEvent->close();
 
 } else {

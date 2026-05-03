@@ -1,5 +1,4 @@
 <?php
-$message = '';
 
 function validTimeRange($startTime, $endTime): bool
 {
