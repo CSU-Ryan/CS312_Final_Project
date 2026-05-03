@@ -26,7 +26,12 @@ function calendar_events(response) {
 }
 
 $(document).ready(function () {
-    // TODO change dummy date
-    $.getJSON("../database/db_retrieve_month_events.php?d=2026-01-01", calendar_events);
+    const params = new Proxy(new URLSearchParams(window.location.search), {
+        get: (searchParams, prop) => searchParams.get(prop),
+    });
+
+    const queryUrl = `../database/db_retrieve_month_events.php?d=${params.d}`;
+    console.log("Querying: " + queryUrl);
+    $.getJSON(queryUrl, calendar_events);
 })
 
