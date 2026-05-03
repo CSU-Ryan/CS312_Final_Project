@@ -19,15 +19,19 @@ if (isset($_SESSION['user_id']) && isset($_GET['d'])) {
     $eventList = $fetchEvent->get_result();
 
     if ($eventList->num_rows > 0) {
-        $success = true;
+        $rows['success'] = true;
+        while ($row = $eventList->fetch_assoc()) {
+            $rows[] = $row;
+        }
+        echo json_encode($rows);
     } else {
-        $success = false;
-        $message = "Event not found";
+        $rows['success'] = false;
+        echo json_encode($rows);
     }
-    $eventList->close();
+    $fetchEvent->close();
 
 } else {
-    $success = false;
-    $message = "Error: No event id provided";
+    $rows['success'] = false;
+    echo json_encode($rows);
 }
 $conn->close();
