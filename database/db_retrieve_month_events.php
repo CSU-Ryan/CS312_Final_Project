@@ -19,18 +19,17 @@ if (isset($_SESSION['user_id']) && isset($_GET['d'])) {
     $eventList = $fetchEvent->get_result();
 
     if ($eventList) {
-        $rows['success'] = true;
         while ($row = $eventList->fetch_assoc()) {
             $rows[] = $row;
         }
+        $json['success'] = true;
+        $json['events'] = $rows;
     } else {
-        $rows['success'] = false;
+        $json['success'] = false;
     }
-    echo json_encode($rows);
     $fetchEvent->close();
-
 } else {
-    $rows['success'] = false;
-    echo json_encode($rows);
+    $json['success'] = false;
 }
+echo json_encode($json);
 $conn->close();
