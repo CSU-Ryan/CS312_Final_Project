@@ -26,7 +26,7 @@ function calendar_events(response) {
 }
 
 $(document).ready(function () {
-    const params = new Proxy(new URLSearchParams(window.location.search), {
+    let params = new Proxy(new URLSearchParams(window.location.search), {
         get: (searchParams, prop) => searchParams.get(prop),
     });
 
