@@ -65,3 +65,4 @@
 </section>
 
 <script type="module" src="calendar.js"></script>
+<script type="module" src="calendar_events.js"></script>
