@@ -10,7 +10,7 @@ $message = '';
 if (isset($_SESSION['user_id']) && isset($_GET['d'])) {
     $user_id = $_SESSION['user_id'];
     $date = $_GET['d'];
-    $month = preg_split('-', $date)[1];
+    $month = explode('-', $date)[1];
 
     /** @noinspection PhpUndefinedVariableInspection */
     $fetchEvent = $conn->prepare("SELECT name, date, start, end FROM events WHERE user_id = ? AND MONTH(date) = ?");
