@@ -19,7 +19,7 @@ function calendar_events(response) {
     $.each(response.events, function (i, event_data) {
         let event = make_event(event_data);
 
-        $(`.calendar-cell[cell-date="${event.date}"]`)
+        $(`.calendar-cell[cell-date="${event_data.date}"]`)
             .find(".event-list")
             .append(event);
     })
