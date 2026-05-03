@@ -26,6 +26,7 @@ function calendar_events(response) {
 }
 
 $(document).ready(function () {
-    $.getJSON("../database/db_retrieve_month_events.php?d=?", calendar_events);
+    // TODO change dummy date
+    $.getJSON("../database/db_retrieve_month_events.php?d=2026-01-01", calendar_events);
 })
 
