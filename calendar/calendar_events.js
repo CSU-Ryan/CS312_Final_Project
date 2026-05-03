@@ -14,6 +14,7 @@ function calendar_events(response) {
         console.log("Failed to retrieve events.");
         return;
     }
+    console.log("Retrieving events...");
 
     for (let i = 0; response.i; i++) {
         let event_data = response.i;
