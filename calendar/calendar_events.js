@@ -30,6 +30,11 @@ $(document).ready(function () {
         get: (searchParams, prop) => searchParams.get(prop),
     });
 
+    if (!params.d) {
+        const today = new Date();
+        params.d = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
+    }
+
     const queryUrl = `../database/db_retrieve_month_events.php?d=${params.d}`;
     console.log("Querying: " + queryUrl);
     $.getJSON(queryUrl, calendar_events);
