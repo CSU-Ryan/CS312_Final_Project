@@ -51,9 +51,9 @@
                 for ($j = 0; $j < 7; $j++) {
                     $day_index = pad($i * 7 + $j + 1 - $first_day_index,2);
                     $in_range = ($day_index > 0) && ($day_index <= $days_in_month);
-                    $cell_date = ($in_range) ? date("Y-m-$day_index", $date) : '';
+                    $cell_date_attr = ($in_range) ? 'cell-date='.date("Y-m-$day_index", $date) : '';
 
-                    echo "<td class='calendar-cell' id='calendar-$i-$j' cell-date='$cell_date'><div>" .
+                    echo "<td class='calendar-cell' id='calendar-$i-$j' $cell_date_attr><div>" .
                         "<div class='day-label'></div>" .
                         "<div class='event-list'></div>" .
                         "</div></td>";
@@ -64,4 +64,4 @@
     </table>
 </section>
 
-<script type="module" src="./calendar.js"></script>
+<script type="module" src="calendar.js"></script>
