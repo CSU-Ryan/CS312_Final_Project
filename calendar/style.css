@@ -83,4 +83,8 @@
             font-size: small;
         }
     }
+
+    .calendar-event:hover {
+        background-color: lightgray;
+    }
 }
