@@ -1,10 +1,13 @@
 nav {
-    justify-self: left;
     width: 30%;
     min-width: 20ex;
+    position: fixed;
+    justify-self: center;
+
     border-right: 1px solid black;
     border-bottom: 1px solid black;
     border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
 
     ul {
         list-style: none;
