@@ -15,7 +15,9 @@
 <body>
 
 <?php
-include 'event.php';
+    include "{$_SERVER['DOCUMENT_ROOT']}/statics/navigation.php";
+
+    include 'event.php';
 ?>
 
 </body>

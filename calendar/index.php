@@ -14,7 +14,9 @@
 
 <body>
     <?php
-        include('calendar.php');
+        include "{$_SERVER['DOCUMENT_ROOT']}/statics/navigation.php";
+
+        include 'calendar.php';
     ?>
 </body>
 
