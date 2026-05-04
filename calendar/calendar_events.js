@@ -43,4 +43,6 @@ function fill_calendar() {
     $.getJSON(queryUrl, calendar_events);
 }
 
-fill_calendar();
+$(document).ready(function() {
+    fill_calendar();
+})

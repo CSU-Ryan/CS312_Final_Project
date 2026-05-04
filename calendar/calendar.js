@@ -62,8 +62,11 @@ $(document).ready(function () {
         window.location.href = "../creator";
     })
 
-    $(".calendar-event").click(function() {
-        window.location.href = `../event/?event_id=${$(this).attr("event-id")}`;
+    $(".event-list").click(function(e) {
+        const event = e.target.closest(".calendar-event");
+        if (event) {
+            window.location.href = `../event/?event_id=${$(event).attr("event-id")}`;
+        }
     });
 
 })
