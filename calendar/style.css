@@ -63,11 +63,11 @@
     }
 
     .event-list {
-        display: flex;
-        flex-direction: column;
-
+        height: 100%;
         padding-right: 1ex;
 
+        display: flex;
+        flex-direction: column;
         overflow-y: scroll;
     }
 
