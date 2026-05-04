@@ -2,6 +2,9 @@ nav {
     justify-self: left;
     width: 30%;
     min-width: 20ex;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-radius: 5px;
 
     ul {
         list-style: none;
