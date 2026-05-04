@@ -79,12 +79,8 @@
         white-space: nowrap;
         overflow: scroll;
 
-        strong {
-            font-size: small;
-        }
-
         em {
-            font-size: x-small;
+            font-size: small;
         }
     }
 }
