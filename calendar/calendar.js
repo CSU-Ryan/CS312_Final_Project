@@ -58,8 +58,12 @@ $(document).ready(function () {
         window.location.href = "?d=" + month.add({months: 1}).toString();
     })
 
-    $("#new-event").on("click", function () {
+    $("#new-event").click(function () {
         window.location.href = "../creator";
     })
+
+    $(".calendar-event").click(function() {
+        window.location.href = `../event/?event_id=${$(this).attr("event-id")}`;
+    });
 
 })
