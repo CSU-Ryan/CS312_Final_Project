@@ -5,6 +5,7 @@ nav {
     justify-self: center;
 
     border-right: 1px solid black;
+    border-left: 1px solid black;
     border-bottom: 1px solid black;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
