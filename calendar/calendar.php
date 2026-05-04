@@ -66,6 +66,6 @@
 
 <script type="module" src="calendar.js"></script>
 <?php
-echo "<link rel='preload' href='../database/db_retrieve_month_events.php?d={$_GET['d']}' as='script'>";
+echo "<link rel='preload' href='/database/db_retrieve_month_events.php?d={$_GET['d']}' as='script'>";
 ?>
 <script type="module" src="calendar_events.js"></script>

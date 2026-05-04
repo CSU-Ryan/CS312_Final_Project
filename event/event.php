@@ -1,5 +1,5 @@
 <?php
-include '../database/db_retrieve_event.php';
+include "{$_SERVER['DOCUMENT_ROOT']}/database/db_retrieve_event.php";
 ?>
 
 <section id="event-viewer">
