@@ -1,3 +1,8 @@
+<head>
+    <title>Redirect Page</title>
+    <base href="/~enderbro/CS312_Final_Project/">
+</head>
+
 <?php
 // Directory: Forwards user to appropriate page based on variables.
 

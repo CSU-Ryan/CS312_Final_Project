@@ -7,6 +7,7 @@
     <meta name="description" content="Page for viewing personal monthly calendar.">
 
     <meta charset="UTF-8">
+    <base href="/~enderbro/CS312_Final_Project/">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
