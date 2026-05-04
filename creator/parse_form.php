@@ -11,6 +11,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!validTimeRange($_POST['start-time'], $_POST['end-time'])) {
         $message = 'Error: Event must start before it ends.';
     } else {
-        include "{$_SERVER['DOCUMENT_ROOT']}/database/db_create_event.php";
+        include "../database/db_create_event.php";
     }
 }

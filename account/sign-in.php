@@ -1,6 +1,6 @@
 <?php
     $message = '';
-    include "{$_SERVER['DOCUMENT_ROOT']}/database/db_connect_account.php";
+    include "../database/db_connect_account.php";
 ?>
 
 <!DOCTYPE html>
