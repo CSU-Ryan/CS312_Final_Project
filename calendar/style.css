@@ -73,7 +73,7 @@
             margin: 1px auto;
 
             border: 1px solid gray;
-            background-color: rgb(128 128 128 / 0.75);
+            border-radius: 5px;
 
             white-space: nowrap;
             overflow: scroll;
