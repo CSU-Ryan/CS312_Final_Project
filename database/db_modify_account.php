@@ -19,6 +19,12 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
+$change_email = $_POST["change_email"] ?? false;
+$change_username = $_POST["change_username"] ?? false;
+$change_password = $_POST["change_password"] ?? false;
+$delete_account = $_POST["delete_account"] ?? false;
+
+
 include 'db_connect.php';
 
 if (!isset($_SESSION['user_id'])) {
@@ -26,20 +32,20 @@ if (!isset($_SESSION['user_id'])) {
 } else {
     $user_id = $_SESSION['user_id'];
 
-    if ($_POST['change_email']) {
+    if ($change_email) {
         $message = change_value('email', $_POST['email'], $user_id, $conn);
     }
 
-    if ($_POST['change_username']) {
+    if ($change_username) {
         $message = change_value('name', $_POST['username'], $user_id, $conn);
     }
 
-    if ($_POST['change_password']) {
+    if ($change_password) {
         $new_password = password_hash($_POST['password'], PASSWORD_DEFAULT);
         $message = change_value('password', $new_password, $user_id, $conn);
     }
 
-    if ($_POST['delete_account']) {
+    if ($delete_account) {
         $deleteAccount = $conn->prepare("DELETE FROM users WHERE id = ?");
         $deleteAccount->bind_param('i', $user_id);
         $deleteAccount->execute();
@@ -57,3 +63,4 @@ if (!isset($_SESSION['user_id'])) {
         $deleteAccount->close();
     }
 }
+$conn->close();
