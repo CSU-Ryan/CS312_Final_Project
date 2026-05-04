@@ -26,7 +26,7 @@ include '../database/db_modify_account.php';
 
 <section id="account-details">
 
-    <div id="account-email">
+    <div id="account-email" class="account-form">
         <h3>Change Email</h3>
         <form action='' method='POST' >
             <label for='email'>
@@ -38,7 +38,7 @@ include '../database/db_modify_account.php';
         </form>
     </div>
 
-    <div id="account-username">
+    <div id="account-username" class="account-form">
         <h3>Change Username</h3>
         <form action='' method='POST' >
             <label for='username'>
@@ -50,7 +50,7 @@ include '../database/db_modify_account.php';
         </form>
     </div>
 
-    <div id="account-password">
+    <div id="account-password" class='account-form'>
         <h3>Change Password</h3>
         <form action='' method='POST' >
             <label for='password'>
@@ -67,7 +67,7 @@ include '../database/db_modify_account.php';
             return confirm('Are you sure you want to delete your account? All events will be permantely destroyed!');
         }
     </script>
-    <div id="account-delete">
+    <div id="account-delete" class="account-form">
         <h3>Delete Account</h3>
         <form action='' method='POST' onsubmit='return ConfirmDelete();' >
             <button type='submit' value='delete_account'>Delete Account</button>
