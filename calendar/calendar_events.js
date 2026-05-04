@@ -25,8 +25,7 @@ function calendar_events(response) {
     })
 }
 
-
-$(document).ready(function () {
+function fill_calendar() {
     let params = new Proxy(new URLSearchParams(window.location.search), {
         get: (searchParams, prop) => searchParams.get(prop),
     });
@@ -42,5 +41,6 @@ $(document).ready(function () {
     const queryUrl = `../database/db_retrieve_month_events.php?d=${date}`;
     console.log("Querying: " + queryUrl);
     $.getJSON(queryUrl, calendar_events);
-})
+}
 
+fill_calendar();
