@@ -1,8 +1,8 @@
 function make_event(event_data) {
     let event = document.createElement("div");
 
-    event.id = "event-" + event_data.event_id;
     event.className = "calendar-event";
+    event.setAttribute("event-id", event_data.event_id);
 
     event.innerHTML = `<strong>${event_data.name}</strong> <br> <em>${event_data.start} - ${event_data.end}</em>`;
 
@@ -25,6 +25,12 @@ function calendar_events(response) {
     })
 }
 
+function click_event() {
+    let event_id = $(this).attr("event-id");
+
+    window.location.href = `../event?event_id=${event_id}`;
+}
+
 $(document).ready(function () {
     let params = new Proxy(new URLSearchParams(window.location.search), {
         get: (searchParams, prop) => searchParams.get(prop),
@@ -41,5 +47,7 @@ $(document).ready(function () {
     const queryUrl = `../database/db_retrieve_month_events.php?d=${date}`;
     console.log("Querying: " + queryUrl);
     $.getJSON(queryUrl, calendar_events);
+
+    $(".calendar-event").click(click_event);
 })
 
