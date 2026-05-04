@@ -9,7 +9,7 @@ nav {
     ul {
         list-style: none;
         margin: auto;
-        padding: 0;
+        padding: 20px;
 
         display: flex;
         flex-direction: row;
