@@ -19,7 +19,7 @@
         </div>
 
         <div class="field" id="event-time">
-            <p>Event Time:</p>
+            Event Time: <br>
 
             <label for="start-time">From:</label>
             <input type="time" id="start-time" name="start-time" step="60" required>
