@@ -4,5 +4,5 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 
 if (!isset($_SESSION['user_id'])) {
-    header('Location: ../account/sign-in.php');
+    header('Location: ../index.php');
 }
