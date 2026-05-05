@@ -1,5 +1,6 @@
 <?php
 include "../database/db_retrieve_event.php";
+include "../database/db_delete_event.php"
 ?>
 
 <section id="event-viewer">
@@ -25,4 +26,14 @@ include "../database/db_retrieve_event.php";
             <em>Description:</em> <p><?php echo $description; ?></p>
         </div>
     </div>
+    <form action="" method="POST" onsubmit="return confirmDelete();">
+        <input type="hidden" name="delete_event" value="true">
+        <button type="submit" value="Delete Event">Delete Event</button>
+    </form>
 </section>
+
+<script>
+    function confirmDelete() {
+        return confirm("Are you sure you want to delete this event? This cannot be undone!");
+    }
+</script>
