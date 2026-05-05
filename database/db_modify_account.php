@@ -27,22 +27,20 @@ $delete_account = $_POST["delete_account"] ?? false;
 
 include 'db_connect.php';
 
-if (!isset($_SESSION['user_id'])) {
-    $message = 'Error: Not logged in.';
-} else {
+if (isset($_SESSION['user_id'])) {
     $user_id = $_SESSION['user_id'];
 
     if ($change_email) {
-        $message = change_value('email', $_POST['email'], $user_id, $conn);
+        $email_message = change_value('email', $_POST['email'], $user_id, $conn);
     }
 
     if ($change_username) {
-        $message = change_value('name', $_POST['username'], $user_id, $conn);
+        $username_message = change_value('name', $_POST['username'], $user_id, $conn);
     }
 
     if ($change_password) {
         $new_password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-        $message = change_value('password', $new_password, $user_id, $conn);
+        $password_message = change_value('password', $new_password, $user_id, $conn);
     }
 
     if ($delete_account) {
@@ -51,9 +49,9 @@ if (!isset($_SESSION['user_id'])) {
         $deleteAccount->execute();
 
         if ($deleteAccount->affected_rows == 0) {
-            $message = 'Error: No user with your ID.';
+            $account_message = 'Error: No user with your ID.';
         } else {
-            $message = 'Account deleted successfully.';
+            $account_message = 'Account deleted successfully.';
 
             $deleteEvents = $conn->prepare("DELETE FROM events WHERE user_id = ?");
             $deleteEvents->bind_param('i', $user_id);

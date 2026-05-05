@@ -48,5 +48,11 @@
     .switch-form {
         padding: 20px;
     }
+
+    .response {
+        padding: 5px 10px;
+        align-content: center;
+        align-items: center;
+    }
 }
 

@@ -3,8 +3,12 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-include '../database/db_modify_account.php';
+$email_message = '';
+$username_message = '';
+$password_message = '';
+$account_message = '';
 
+include '../database/db_modify_account.php';
 ?>
 
 <!DOCTYPE html>
@@ -36,6 +40,9 @@ include '../database/db_modify_account.php';
 
             <button type='submit' value='change_email'>Set New Email</button>
         </form>
+        <div class="response">
+            <p><?php echo $email_message; ?></p>
+        </div>
     </div>
 
     <div id="account-username" class="account-form">
@@ -48,6 +55,9 @@ include '../database/db_modify_account.php';
 
             <button type='submit' value='change_username'>Set New Username</button>
         </form>
+        <div class="response">
+            <p><?php echo $username_message; ?></p>
+        </div>
     </div>
 
     <div id="account-password" class='account-form'>
@@ -60,6 +70,9 @@ include '../database/db_modify_account.php';
 
             <button type='submit' value='change_password'>Set New Password</button>
         </form>
+        <div class="response">
+            <p><?php echo $password_message; ?></p>
+        </div>
     </div>
 
     <script>
@@ -72,6 +85,9 @@ include '../database/db_modify_account.php';
         <form action='' method='POST' onsubmit='return ConfirmDelete();' >
             <button type='submit' value='delete_account'>Delete Account</button>
         </form>
+        <div class="response">
+            <p><?php echo $account_message; ?></p>
+        </div>
     </div>
 
 </section>
