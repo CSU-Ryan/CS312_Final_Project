@@ -1,7 +1,5 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
+include '../statics/account_logic.php';
 
 $email_message = '';
 $username_message = '';

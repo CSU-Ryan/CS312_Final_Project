@@ -1,3 +1,7 @@
+<?php
+include '../statics/account_logic.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
