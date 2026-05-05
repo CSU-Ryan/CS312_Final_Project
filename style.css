@@ -3,3 +3,57 @@
 @import 'creator/style.css';
 @import 'event/style.css';
 @import 'statics/style.css';
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+    h2, h3 {
+        text-align: center;
+    }
+
+    form {
+        width: 90%;
+        max-width: 50ex;
+
+        padding: 0 30px 30px;
+        border: gray solid 1px;
+        border-radius: 30px;
+
+        button {
+            display: block;
+            margin: auto;
+            width: 90%;
+            max-width: 150px;
+        }
+    }
+
+    .field {
+        margin: 10px;
+        padding: 10px;
+
+        display: flex;
+        flex-direction: row;
+        border: gray solid 1px; /* Change border color later when have palette */
+        border-radius: 10px;
+
+        label {
+            display: inline-block;
+            margin: auto;
+        }
+
+        input {
+            max-width: 70%;
+            margin-left: auto;
+        }
+    }
+
+    .message {
+        padding: 5px 10px;
+        align-content: center;
+        align-items: center;
+    }
+}

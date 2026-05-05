@@ -24,9 +24,10 @@ if (isset($_SESSION['user_id'])) {
 </head>
 
 <body>
-    <section id="sign-in" class="account-form">
+    <section id="sign-in" class="form">
+        <h2>Sign In</h2>
+
         <form action="" method="post">
-            <h2>Sign In</h2>
 
             <div class="field">
                 <label for="username">Username</label>
@@ -38,12 +39,12 @@ if (isset($_SESSION['user_id'])) {
                 <input type="password" id="password" name="password" placeholder="Password" required>
             </div>
 
-            <div class="message">
-                <p><?php echo $message; ?></p>
-            </div>
-
-            <button type="submit">Sign In</button>
+            <button type="submit" value="Sign In">Sign In</button>
         </form>
+
+        <div class="message">
+            <p><?php echo $message; ?></p>
+        </div>
 
         <div class="switch-form">
             Don't have an account? <a href="sign-up.php">Sign up here.</a>

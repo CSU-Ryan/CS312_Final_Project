@@ -17,31 +17,32 @@
 </head>
 
 <body>
-    <section id="sign-up" class="account-form">
-        <form action="#" method="post">
-            <h2>Sign Up</h2>
+    <section id="sign-up" class="form">
+        <h2>Sign Up</h2>
+
+        <form action="" method="post">
 
             <div class="field">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Email address" required>
+                <input type="email" name="email" id="email" placeholder="Email address..." required>
             </div>
 
             <div class="field">
                 <label for="username">Username</label>
-                <input type="text" name="username" id="username" placeholder="Username" required>
+                <input type="text" name="username" id="username" placeholder="Username..." required>
             </div>
 
             <div class="field">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="Password" required>
+                <input type="password" name="password" id="password" placeholder="Password..." required>
             </div>
 
-            <div class="message">
-                <p><?php echo $message; ?></p>
-            </div>
-
-            <button type="submit">Sign Up</button>
+            <button type="submit" value="Sign Up">Sign Up</button>
         </form>
+
+        <div class="message">
+            <p><?php echo $message; ?></p>
+        </div>
 
         <div class="switch-form">
             Already have an account? <a href="sign-in.php">Sign in here.</a>
