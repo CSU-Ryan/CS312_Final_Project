@@ -1,7 +1,7 @@
 <?php
 
 function change_value($parameter, $new_value, $user_id, $conn) {
-    $modify = $conn->prepare("UPDATE users SET parameter = ? WHERE id = ?");
+    $modify = $conn->prepare("UPDATE users SET $parameter = ? WHERE id = ?");
     $modify->bind_param('si', $new_value, $user_id);
     $modify->execute();
 
