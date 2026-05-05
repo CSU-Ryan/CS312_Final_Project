@@ -1,5 +1,5 @@
 <?php
-
+$date = $_GET['date'] ?? date('Y-m-d');
 ?>
 
 <section id="agenda">
@@ -9,6 +9,6 @@
 </section>
 
 <?php
-echo "<link rel='preload' href='../database/db_retrieve_future_events.php?d={$_GET['d']}' as='script'>";
+echo "<link rel='preload' href='../database/db_retrieve_future_events.php?d=$date' as='script'>";
 ?>
 <script type="module" src="agenda.js"></script>
