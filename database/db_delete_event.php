@@ -19,14 +19,9 @@ if ($delete_event) {
         $deleteEvent = $conn->prepare("DELETE FROM events WHERE user_id = ? AND event_id = ?");
         $deleteEvent->bind_param('ii', $user_id, $event_id);
         $deleteEvent->execute();
-
-        if ($deleteEvent->num_rows > 0) {
-            $message = "Event successfully deleted";
-            header("Location: ../index.php");
-        } else {
-            $message = "Error: Event does not exist";
-        }
         $deleteEvent->close();
+
+        header("Location: ../index.php");
 
     } else {
         $message = "Error: No event id provided";
