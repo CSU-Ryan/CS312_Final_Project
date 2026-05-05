@@ -1,7 +1,8 @@
 nav {
     width: 30%;
     min-width: 20ex;
-    position: fixed;
+    position: sticky;
+    top: 0;
     justify-self: center;
 
     border-right: 1px solid black;
