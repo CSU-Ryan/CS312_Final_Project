@@ -1,9 +1,9 @@
 nav {
-    width: 30%;
+    width: 40%;
     min-width: 20ex;
+    margin: 0 auto;
     position: sticky;
     top: 0;
-    justify-self: center;
 
     background-color: white;
     border-right: 1px solid black;
