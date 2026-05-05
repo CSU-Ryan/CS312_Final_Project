@@ -30,12 +30,12 @@ if (isset($_SESSION['user_id'])) {
         <form action="" method="post">
 
             <div class="field">
-                <label for="username">Username</label>
+                <label for="username">Username:</label>
                 <input type="text" id="username" name="username" placeholder="Username" required>
             </div>
 
             <div class="field">
-                <label for="password">Password</label>
+                <label for="password">Password:</label>
                 <input type="password" id="password" name="password" placeholder="Password" required>
             </div>
 
