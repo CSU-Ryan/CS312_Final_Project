@@ -35,7 +35,7 @@ if (isset($_SESSION['user_id'])) {
     }
 
     if ($change_username) {
-        $username_message = change_value('name', $_POST['username'], $user_id, $conn);
+        $username_message = change_value('username', $_POST['username'], $user_id, $conn);
     }
 
     if ($change_password) {
