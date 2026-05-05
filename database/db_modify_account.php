@@ -57,6 +57,9 @@ if (isset($_SESSION['user_id'])) {
             $deleteEvents->bind_param('i', $user_id);
             $deleteEvents->execute();
             $deleteEvents->close();
+
+            unset($_SESSION['user_id']);
+            session_destroy();
         }
         $deleteAccount->close();
     }
