@@ -38,9 +38,9 @@
     .field {
         margin: 10px;
         padding: 10px;
+        text-align: center;
+        line-height: 1.7em;
 
-        display: flex;
-        flex-direction: row;
         border: gray solid 1px; /* Change border color later when have palette */
         border-radius: 10px;
 
@@ -50,6 +50,7 @@
         }
 
         input {
+            display: inline-block;
             width: 90%;
             margin-left: auto;
         }
