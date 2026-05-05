@@ -35,6 +35,7 @@
 
         <div class="field">
             <label for="description">Description (Optional):</label>
+            <br>
             <textarea id="description" name="description"></textarea>
         </div>
 
