@@ -22,7 +22,7 @@ if ($delete_event) {
 
         if ($deleteEvent->num_rows > 0) {
             $message = "Event successfully deleted";
-            header("location: ../index.php");
+            header("Location: ../index.php");
         } else {
             $message = "Error: Event does not exist";
         }
