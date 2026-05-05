@@ -1,6 +1,13 @@
 <?php
     $message = '';
     include "../database/db_connect_account.php";
+
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+    if (isset($_SESSION['user_id'])) {
+        header('Location: ../index.php');
+    }
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +25,7 @@
 
 <body>
     <section id="sign-in" class="account-form">
-        <form action="#" method="post">
+        <form action="" method="post">
             <h2>Sign In</h2>
 
             <div class="field">

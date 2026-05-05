@@ -26,8 +26,6 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                 session_start();
             }
             $_SESSION['user_id'] = $db_id;
-            header('Location: ../index.php');
-            exit();
         } else {
             $message = 'Wrong password';
         }
