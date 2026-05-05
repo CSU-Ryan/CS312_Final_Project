@@ -40,7 +40,7 @@ function fill_agenda(events) {
     let current_day;
     $.each(events, function (key, event_data) {
         if (event_data.date !== current_day) {
-            let date = Temporal.from(event_data.date);
+            let date = Temporal.PlainDateTime.from(event_data.date);
             agenda.appendChild(create_header(date));
         }
 
